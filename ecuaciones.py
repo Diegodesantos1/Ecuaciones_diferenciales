@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import sympy as sp
-import math
+import mathS
 class Ecuaciones_diferenciales:
     def ecuacion2():
         t = sp.Symbol("t") ; y = sp.Function("y")
