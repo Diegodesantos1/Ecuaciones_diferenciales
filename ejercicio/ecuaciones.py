@@ -15,8 +15,8 @@ class Ecuaciones_diferenciales:
         print(f" La solución es {sp.dsolve(ecuacion, y(t))}")
         t = np.linspace(0, 2, 100) ; y = 1/3*t**3 + 1/3*t**2
         plt.plot(t, y) ; plt.xlabel('t') ; plt.ylabel('y')
-        plt.title('Ecuación diferencial 2ty\'- y = 3t**2')
+        plt.title('Ecuación diferencial 2ty\'- y = 3t**2 : FAMILIA DE SOLUCIONES', fontsize=10, color='blue')
         plt.grid() ; plt.show()
 
 
-Ecuaciones_diferenciales.ecuacion1()
+Ecuaciones_diferenciales.ecuacion4()
