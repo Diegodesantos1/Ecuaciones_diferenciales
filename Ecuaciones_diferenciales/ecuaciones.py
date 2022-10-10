@@ -9,10 +9,10 @@ class Ecuaciones:
         ics = {y(3): -1}
         print(f" La solución de la primera ecuación es {sp.dsolve(ecuacion, y(x), ics=ics)}")
     def ecuacion2():
-        t = sp.Symbol("t") ; y = sp.Function("y")
-        ecuacion = sp.Eq(y(t).diff(t) * sp.sin(t), y(t) * sp.log(y(t)))
+        x = sp.Symbol("x") ; y = sp.Function("y")
+        ecuacion = sp.Eq(y(x).diff(x) * sp.sin(x), y(x) * sp.log(y(x)))
         ics = {y((math.pi/2)): math.e}
-        print(f" La solución de la segunda ecuación es {sp.dsolve(ecuacion, y(t), ics=ics)}")
+        print(f" La solución de la segunda ecuación es {sp.dsolve(ecuacion, y(x), ics=ics)}")
     def ecuacion3():
         t = sp.Symbol("t") ; y = sp.Function("y")
         ecuacion = sp.Eq(y(t).diff(t) - (y(t)/(t-2)), 2*(t-2)**2)
