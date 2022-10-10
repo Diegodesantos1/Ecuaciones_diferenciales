@@ -2,12 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import sympy as sp
 import math
-
 class Ecuaciones_diferenciales:
-    def ecuacion1():
-        pass
     def ecuacion2():
-        #  Halla la solución particular de la ecuación y' senx= y Ln y que satisfaga la condición inicial y(pi/2) = e
         t = sp.Symbol('t') ; y = sp.Function('y')
         ecuacion = sp.Eq(y(t).diff(t) * sp.sin(t), y(t) * sp.log(y(t)))
         ics = {y((math.pi/2)): math.e}
