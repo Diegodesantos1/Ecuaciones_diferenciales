@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import sympy as sp
 import math
-class Ecuaciones_diferenciales:
+class Ecuaciones:
     def ecuacion2():
         t = sp.Symbol("t") ; y = sp.Function("y")
         ecuacion = sp.Eq(y(t).diff(t) * sp.sin(t), y(t) * sp.log(y(t)))
@@ -29,6 +29,6 @@ class Ecuaciones_diferenciales:
         plt.title("4a Ecuación Diferencial", fontsize=10, color="blue")
         plt.grid() ; plt.show()
 
-Ecuaciones_diferenciales.ecuacion2()
-Ecuaciones_diferenciales.ecuacion3()
-Ecuaciones_diferenciales.ecuacion4()
+Ecuaciones.ecuacion2()
+Ecuaciones.ecuacion3()
+Ecuaciones.ecuacion4()
