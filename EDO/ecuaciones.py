@@ -27,7 +27,4 @@ class Ecuaciones:
         plt.plot(t, y1, label="y1(t)") ; plt.plot(t, y2, label="y2(t)")
         plt.plot(t, y3, label="y3(t)") ; plt.plot(t, y4, label="y4(t)")
         plt.title("Familia de soluciones de la ecuación diferencial", fontsize=15, color="blue") ; plt.legend() ; plt.grid() ; plt.show()
-Ecuaciones.ecuacion1()
-Ecuaciones.ecuacion2()
-Ecuaciones.ecuacion3()
-Ecuaciones.ecuacion4()
+
