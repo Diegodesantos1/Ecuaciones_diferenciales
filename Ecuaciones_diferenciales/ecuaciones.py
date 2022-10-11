@@ -1,13 +1,15 @@
+from numbers import Integral
 import matplotlib.pyplot as plt
 import numpy as np
 import sympy as sp
+from sympy import *
 import math
 class Ecuaciones:
     def ecuacion1():
-        x = sp.Symbol("x") ; y = sp.Function("y")
-        ecuacion = sp.Eq(y(x), (x**2 - 1)/(1 + 1/y(x)))
-        ics = {y(3): -1}
-        print(f" La solución de la primera ecuación es {sp.dsolve(ecuacion, y(x), ics=ics)}")
+        x = sp.Symbol("x") ; y = sp.Symbol("y")
+        e1 = integrate((1 + 1/y), y) ; e2 = integrate((x**2 - 1), x)
+        ecuacion = sp.Eq(e1, e2)
+        print(f" La solución de la primera ecuación es {sp.solve(ecuacion, y)}")
     def ecuacion2():
         x = sp.Symbol("x") ; y = sp.Function("y")
         ecuacion = sp.Eq(y(x).diff(x) * sp.sin(x), y(x) * sp.log(y(x)))
