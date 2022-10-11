@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import numpy as np
 import sympy as sp
 from sympy import *
@@ -21,7 +22,11 @@ class Ecuaciones:
         t = sp.Symbol("t") ; y = sp.Function("y")
         ecuacion = sp.Eq(2*t*y(t).diff(t) - y(t), 3*t**2)
         print(f" La solución de la cuarta ecuación es {sp.dsolve(ecuacion, y(t))}")
-
+        t = np.linspace(0, 1, 100) ; y1 = 3*t**2/2 ; y2 = 3*t**2/2 + 3*t**3/2
+        y3 = 3*t**2/2 + 3*t**3/2 + 3*t**4/2 ; y4 = 3*t**2/2 + 3*t**3/2 + 3*t**4/2 + 3*t**5/2
+        plt.plot(t, y1, label="y1(t)") ; plt.plot(t, y2, label="y2(t)")
+        plt.plot(t, y3, label="y3(t)") ; plt.plot(t, y4, label="y4(t)")
+        plt.legend() ; plt.grid() ; plt.show()
 Ecuaciones.ecuacion1()
 Ecuaciones.ecuacion2()
 Ecuaciones.ecuacion3()
