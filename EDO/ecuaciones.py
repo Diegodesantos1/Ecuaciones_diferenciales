@@ -24,4 +24,3 @@ class Ecuaciones:
         ecuacion = sp.Eq(2*t*y(t).diff(t) - y(t), 3*t**2) ; sol = sp.dsolve(ecuacion, y(t))
         print(f" La solución de la cuarta ecuación es: \n\n\n")
         sp.pprint(sol)
-
